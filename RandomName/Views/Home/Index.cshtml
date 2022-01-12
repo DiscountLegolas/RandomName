@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    if (RandomName.Models.Names.TurkishName != null)
+    {
+        <p>@RandomName.Models.Names.TurkishName</p>
+        <br />
+    }
+    @Html.ActionLink("Yeni İsim Oluştur", "YeniİsimOluştur", "Home", null, new { @class = "btn btn-danger" })
+    <br />
+    if (RandomName.Models.Names.MaleName != null)
+    {
+        <p>@RandomName.Models.Names.MaleName</p>
+        <br />
+    }
+    @Html.ActionLink("Generate Male Name", "GenerateRandomEnglishMaleName", "Home", null, new { @class = "btn btn-danger" })
+    <br />
+    if (RandomName.Models.Names.FemaleName != null)
+    {
+        <p>@RandomName.Models.Names.FemaleName</p>
+        <br />
+    }
+    @Html.ActionLink("Generate Female Name", "GenerateRandomEnglishFemaleName", "Home", null, new { @class = "btn btn-danger" })
+}
